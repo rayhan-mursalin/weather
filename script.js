@@ -35,4 +35,14 @@ form.addEventListener("submit", e => {
 		  }
 		  return content == inputVal.toLowerCase();
 		});
+
+		if (filteredArray.length > 0) {
+			msg.textContent = `You already know the weather for ${
+			  filteredArray[0].querySelector(".city-name span").textContent
+			} ...otherwise be more specific by providing the country code as well 😉`;
+			form.reset();
+			input.focus();
+			return;
+		  }
+		}
   });
